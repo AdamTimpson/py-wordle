@@ -10,5 +10,5 @@ def populate_words() -> None:
             words.append(line.strip())
 
 def get_random_word() -> list[str]:
-    print(words)
-    return words[random.randint(0, len(words))]
+    # print(words)
+    return words[random.randint(0, len(words) - 1)]

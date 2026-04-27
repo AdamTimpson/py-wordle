@@ -6,4 +6,8 @@ class Round:
 
     def submit(self, user_input: str) -> None:
         self.guesses.append(user_input)
+        
+        for char in user_input:
+            if char in self.word:
+                print("HIT")
 
