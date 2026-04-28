@@ -84,13 +84,30 @@ key[i] = GREEN
 ## 📝 Example Gameplay  
   
 ```  
-(#1/5) Guess: CRANE  
-['_', '🟨', '_', '🟩', '_']  
-  
-(#2/5) Guess: SLATE  
-['🟩', '🟩', '🟩', '🟩', '🟩']  
-  
-YOU WIN  
+(#1/5) Guess: HOUSE
+⬜️⬜️⬜️⬜️🟩
+
+(#2/5) Guess: TERSE
+⬜️🟨⬜️⬜️🟩
+
+(#3/5) Guess: BLOUSE
+Enter a five letter word only! 6/5
+
+(#3/5) Guess: BLOOM
+⬜️🟩⬜️⬜️⬜️
+
+(#4/5) Guess: WORLD
+⬜️⬜️⬜️🟨⬜️
+
+(#5/5) Guess: GUESS
+⬜️⬜️🟨⬜️⬜️
+
+The answer was: ALIVE
+⬜️⬜️⬜️⬜️🟩
+⬜️🟨⬜️⬜️🟩
+⬜️🟩⬜️⬜️⬜️
+⬜️⬜️⬜️🟨⬜️
+⬜️⬜️🟨⬜️⬜️
 ```
 
 ---
