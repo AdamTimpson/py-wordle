@@ -6,8 +6,11 @@ GUESSES = []
 
 GREEN = "🟩"
 YELLOW = "🟨"
+GREY = "⬜️"
 
 SUCCESS_KEY = [GREEN] * 5
+
+RESULTS = [] 
 
 def valid_guess(guess): 
     if len(guess) != 5:
@@ -20,7 +23,7 @@ def valid_guess(guess):
     return True
 
 def compare(guess, answer):
-    key = ["_"] * 5
+    key = [GREY] * 5
     
     for i in range(0, 5):
         if guess[i] in answer:
@@ -36,12 +39,12 @@ if __name__ == "__main__":
     # Populate the words list 
     with open(WORD_FILE) as file:
         for line in file:
-            WORDS.append(line.strip())
+            WORDS.append(line.strip().upper())
 
-    print(WORDS)
+    # print(WORDS)
     # Determine a word as the answer
     answer = WORDS[random.randint(0, len(WORDS) - 1)]
-    print(answer)
+    # print(answer)
 
     word_found = False
     max_guesses = 5
@@ -58,8 +61,16 @@ if __name__ == "__main__":
             guesses_taken += 1
 
             result_key = compare(guess, answer)
-            print(result_key)
+            print("".join(result_key))
+            RESULTS.append("".join(result_key))
 
             if result_key == SUCCESS_KEY:
-                print("YOU WIN")
-                exit(0)
+                word_found = True
+                break 
+
+    if word_found: 
+        print("YOU WIN!")
+    else:
+        print(f"\nThe answer was: {answer}")
+    
+    print("\n".join(RESULTS))

@@ -70,11 +70,14 @@ key[i] = GREEN
   
 ## 🚀 Possible Improvements  
   
-- Prevent invalid dictionary words (check against word list)  
-- Command line arguments for 
-	- Enabling hints (show the possible remaining letters)
-	- Setting the number of guesses 
-- Productify the code 
+- [x] Update the list of possible words
+- [ ] Prevent invalid dictionary words (check against word list)  
+- [ ] Command line arguments for 
+	- [ ] Enabling hints (show the possible remaining letters)
+	- [ ] Setting the number of guesses 
+    - [ ] Debug mode (showing the word list, showing the answer, etc) 
+- [ ] Productify the code 
+- [x] Print the final grid of results
   
 ---  
   
