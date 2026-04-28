@@ -1,1 +1,88 @@
-A simple Python CLI to play wordle in the terminal
+A simple command-line implementation of a Wordle-style word guessing game written in Python.  
+  
+## 📌 Overview  
+  
+This program randomly selects a 5-letter word from a file and allows the user up to 5 attempts to guess it. After each guess, feedback is provided to indicate how close the guess is to the correct answer.  
+  
+---  
+  
+## 🎮 How It Works  
+  
+- The game selects a random word from `words.txt`.  
+- The player inputs a 5-letter guess.  
+- The program returns a result key:  
+- 🟩 (Green): Correct letter in the correct position  
+- 🟨 (Yellow): Correct letter in the wrong position  
+- `_` (Underscore): Letter not in the word  
+- The player has **5 attempts** to guess the word.  
+- If all letters are correct (🟩🟩🟩🟩🟩), the player wins.  
+  
+---  
+  
+## 📂 Project Structure  
+  
+```  
+.  
+├── main.py # Game logic  
+├── words.txt # List of valid 5-letter words  
+```  
+  
+---  
+  
+## ▶️ Running the Game  
+  
+Make sure you have Python installed (Python 3.x recommended).  
+  
+Run the script:  
+  
+```bash  
+python main.py  
+```  
+  
+---  
+  
+## 🧠 Game Logic  
+  
+### Input Validation  
+  
+The function `valid_guess()` ensures:  
+- The guess is exactly 5 characters long  
+- The guess contains no numbers  
+  
+---  
+  
+### Comparison Algorithm  
+  
+The `compare()` function:  
+1. Marks letters as 🟨 if they exist anywhere in the answer  
+2. Overwrites with 🟩 if the letter is in the correct position  
+  
+```python  
+if guess[i] in answer:  
+key[i] = YELLOW  
+  
+if guess[i] == answer[i]:  
+key[i] = GREEN  
+```  
+
+
+---  
+  
+## 🚀 Possible Improvements  
+  
+- Add a keyboard display showing used letters  
+- Prevent invalid dictionary words (check against word list)  
+  
+---  
+  
+## 📝 Example Gameplay  
+  
+```  
+(#1/5) Guess: CRANE  
+['_', '🟨', '_', '🟩', '_']  
+  
+(#2/5) Guess: SLATE  
+['🟩', '🟩', '🟩', '🟩', '🟩']  
+  
+YOU WIN  
+```
